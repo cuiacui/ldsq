@@ -1,7 +1,7 @@
 
 <template>
   <div id="login">
-    <h1>灵动社区注册</h1>
+    <h1>灵动社区注册注册注册注册</h1>
     <p>
       <span>请输入用户名:</span
       ><el-input
