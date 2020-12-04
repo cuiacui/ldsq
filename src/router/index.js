@@ -14,6 +14,12 @@ const routes = [
     name: 'Consult',
     component: () => import('@/views/Consult.vue')
   },
+  //跳转到视频详情页
+  {
+    path : '/video',
+    name : 'Videodetails',
+    component: () => import('@/components/Videodetails.vue')
+  },
   {
     path: '/news',
     name: 'News',
@@ -117,6 +123,12 @@ const routes = [
     name: 'Regin',
     component: () => import('@/views/houtai/Reg.vue')
   },
+  //涛涛的路由
+  {
+    path : '/search',
+    name : 'Search',
+    component: ()=> import('@/components/Search.vue')
+  }
 
 ]
 
