@@ -83,10 +83,6 @@ export default {
 .nav-img{
   width: 100px;
   height: 70px;
-<<<<<<< HEAD
-  cursor: pointer;
-=======
->>>>>>> b8897b7... 添加了登录注册
 }
 .nav-more{
   display: flex;
@@ -101,12 +97,6 @@ export default {
   align-items: center;
 }
 .nav-ul li{
-<<<<<<< HEAD
-  cursor: pointer;
-}
-.nav-ul li{
-=======
->>>>>>> b8897b7... 添加了登录注册
   margin: 0 30px;
 }
 .nav-right{
@@ -114,12 +104,7 @@ export default {
   align-items: center;
 }
 .nav-btn{
-<<<<<<< HEAD
-  height: 30px;
-  width: 70px;
-=======
   height: 35px;
->>>>>>> b8897b7... 添加了登录注册
   color: black;
   border-color: black;
 }

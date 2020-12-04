@@ -10,7 +10,6 @@ const routes = [
     component: () => import('@/views/Index.vue')
   },
   {
-<<<<<<< HEAD
     path: '/consult',
     name: 'Consult',
     component: () => import('@/views/Consult.vue')
@@ -24,7 +23,7 @@ const routes = [
     path: '/personal',
     name: 'Personal',
     component: () => import('@/views/Personal.vue'),
-    children:[
+    children: [
       {
         path: '/main',
         name: 'Main',
@@ -56,15 +55,13 @@ const routes = [
         component: () => import('@/components/personal/Zan.vue'),
       },
     ]
-  }
-]
-=======
+  }, {
     path: '/detail',
     name: 'datail',
     component: () => import('@/views/News-detail.vue')
   },
   {
-    path: '/main',
+    path: '/test',
     name: 'Main',
     component: () => import('@/views/Main.vue'),
     children: [
@@ -123,7 +120,6 @@ const routes = [
 
 ]
 
->>>>>>> b8897b7... 添加了登录注册
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,

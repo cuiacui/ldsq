@@ -38,7 +38,6 @@
       <!-- 我的信息 -->
       <div class="personalMain">
           <div class="personalMain_left">
-<<<<<<< HEAD
             <ul id="ulbiao">
              <router-link to="/main"><li class="myNews ">我的消息</li></router-link>
              <router-link to="/artical"><li class="myNews">我的文章</li></router-link>
@@ -50,18 +49,6 @@
           </div>  
           <div class="personalMain_right">
             <router-view></router-view>
-=======
-            <ul>
-              <li class="myNews">我的消息</li>
-              <li class="myNews">我的文章</li>
-              <li class="myNews">我的24小时</li>
-              <li class="myNews">我的评论</li>
-              <li class="myNews">我的收藏</li>
-              <li class="myNews">我的订单</li>
-            </ul>
-          </div>  
-          <div class="personalMain_right">
->>>>>>> b8897b7... 添加了登录注册
           </div>      
       </div>
       </div>
@@ -77,26 +64,17 @@ export default {
   },
   data(){
     return {
-<<<<<<< HEAD
 
     }
   },
   methods:{   
-=======
-      tabPosition: 'left'
-    }
->>>>>>> b8897b7... 添加了登录注册
   }
 
 }
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 ul{
-=======
-*{
->>>>>>> b8897b7... 添加了登录注册
   margin: 0;
   padding: 0;
 }
@@ -104,11 +82,7 @@ ul{
 .personalBgc{
   background-color:#F0F4FB;
   height: 939px;
-<<<<<<< HEAD
   padding-top: 90px;
-=======
-  padding-top: 30px;
->>>>>>> b8897b7... 添加了登录注册
 }
 /* 上部数据 */
 .personalData{
@@ -191,11 +165,7 @@ font-size: 16px;
 .personalMain_right{
   border-left: 1px solid #F0F0F0;
 }
-<<<<<<< HEAD
 .selected{
   background: red;
 }
-=======
-
->>>>>>> b8897b7... 添加了登录注册
 </style>

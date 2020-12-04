@@ -51,11 +51,7 @@
       </div>
       <!-- 查看更多 -->
       <div class="findMore">
-<<<<<<< HEAD
             <el-button round size="samll" plain class="find-btn">查看更多最新资讯</el-button>
-=======
-            <el-button round size="samll" plain class="nav-btn">查看更多最新资讯</el-button>
->>>>>>> b8897b7... 添加了登录注册
       </div>
   </div>
 </template>
@@ -303,17 +299,15 @@ export default {
     align-items: center; */
     position: relative;
 }
-<<<<<<< HEAD
 .find-btn{
   color: black;
   border-color: black;
   height: 30px;
   width: 160px;
-=======
+}
 .nav-btn{
   color: black;
   border-color: black;
->>>>>>> b8897b7... 添加了登录注册
   position: absolute;
   left: 0;
   right: 0;

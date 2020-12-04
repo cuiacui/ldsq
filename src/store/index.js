@@ -20,7 +20,6 @@ export default new Vuex.Store({
         personal_weixin:"微信",             //用户的微信
         personal_money : '99999',             // 用户余额
         personal_zan : '已开启'                  //赞赏状态  1  已开启  0 关闭
-<<<<<<< HEAD
       },
       personal_detail:{
         personal_main :{                          //我的消息
@@ -70,9 +69,6 @@ export default new Vuex.Store({
         personal_my24:""
       }
 
-=======
-      }
->>>>>>> b8897b7... 添加了登录注册
       
     }
 

@@ -10,14 +10,12 @@
 	margin:0;
 	padding:0;
   }
-<<<<<<< HEAD
   body{
     font-family: "微软雅黑";
-=======
+  }
   body,html{
     font-family: "微软雅黑";
     height:100%
->>>>>>> b8897b7... 添加了登录注册
   }
   li{
     list-style: none;
@@ -30,9 +28,6 @@
   }
   #app{
     width: 100%;
-<<<<<<< HEAD
-=======
     height: 100%;
->>>>>>> b8897b7... 添加了登录注册
   }
 </style>
