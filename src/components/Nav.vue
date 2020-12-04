@@ -5,7 +5,7 @@
       </div>
       <div class="nav-more">
         <ul class="nav-ul">
-          <li class="nav-ul-li">咨询
+          <li class="nav-ul-li" @click="toconsult">咨询
             <div class="nav-ul-li-div">
                 <span>视频</span>
                 <span>出行</span>
@@ -24,7 +24,7 @@
                 <span>生活强调</span>
             </div>
           </li>
-          <li>视频</li>
+          <li @click="toconsult">视频</li>
           <li>24小时</li>
         </ul>
         <div class="nav-right">
@@ -51,7 +51,7 @@
 
 <script>
 export default {  
-   methods: {
+    methods: {
       open() {
         this.$alert('登录内容', '登录', {
           confirmButtonText: '确定',
@@ -62,6 +62,11 @@ export default {
             });
           }
         });
+      },
+      toconsult(){
+        this.$router.push({
+          path: '/consult'
+        })
       }
     }
   }
