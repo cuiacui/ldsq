@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
       <div class="nav-img">
-        <img src="../../public/img/wx-img.jpg" class="nav-img">
+        <img src="../../public/img/wx-img.jpg" class="nav-img" @click="toIndex">
       </div>
       <div class="nav-more">
         <ul class="nav-ul">
@@ -29,7 +29,8 @@
         </ul>
         <div class="nav-right">
           <el-button round size="small" plain class="nav-btn">投稿</el-button>
-            <i class="el-icon-zoom-in"></i>
+            <i class="el-icon-zoom-in" @click="toSearch"></i>
+            <!-- <i class="el-icon-close" style="font-size:30px;font-weight:bold" @click="toSearch"></i> -->
             <div class="logo-tb">
               <!-- <el-button type="text" class="el-icon-user-solid" @click="open"></el-button> -->
               <div class="login-over">
@@ -67,6 +68,18 @@ export default {
         this.$router.push({
           path: '/consult'
         })
+      },
+      //去搜索页面
+      toSearch(){
+        this.$router.push({
+          path : '/search'
+        }) 
+         this.isShow = true
+      },
+      toIndex(){
+        this.$router.push({
+          path : '/'
+        })
       }
     }
   }
@@ -88,6 +101,7 @@ export default {
 .nav-img{
   width: 100px;
   height: 70px;
+  cursor:pointer;
 }
 .nav-more{
   display: flex;
@@ -103,6 +117,7 @@ export default {
 }
 .nav-ul li{
   margin: 0 30px;
+  cursor:pointer;
 }
 .nav-right{
   display: flex;

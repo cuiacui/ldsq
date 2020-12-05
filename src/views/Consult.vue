@@ -11,6 +11,7 @@
                         :date="item.date"
                         :start_num="item.start_num"
                         :coll_num="item.coll_num"
+                        @click="toVideo"
                         >
                 </ConsInto>
                 <ConLeft v-for="(item,index) in mainLeft" :key="index"
@@ -20,6 +21,7 @@
                     :date="item.date"
                     :start_num="item.start_num"
                     :coll_num="item.coll_num"
+                      @click="toVideo"
                     >
                 </ConLeft>
             </div>
@@ -137,6 +139,12 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        toVideo(){
+            this.$emit('click')
+        }
+        
     }
 }
 </script>

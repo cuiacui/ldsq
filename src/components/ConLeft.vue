@@ -1,5 +1,5 @@
 <template>
-    <div :class="{main,mainA}">
+    <div :class="{main,mainA}" @click="toVideo">
       <div class="main-big"> 
           <!-- 主图 -->
           <div class="main-pic-img" >
@@ -73,7 +73,11 @@ export default {
         }
     },
     methods:{
-
+      toVideo(){
+        this.$router.push({
+          path : '/video'
+        })
+      }
     }
 }
 </script>
