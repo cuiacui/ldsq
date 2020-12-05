@@ -81,21 +81,19 @@ export default {
 <style scoped>
 .main{
     width: 1036px;
-    /* height: 289px; */
     display: flex;
     justify-content: space-between;
     overflow: hidden;
 }
 .mainA{
     width: 1036px;
-    /* height: 289px; */
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     flex-direction: row-reverse;
 }
 .main-big{
-  width: 512px;
+  width: 510px;
   height: 289px;
   background: #f4f4f4;
   margin-bottom: 8px;

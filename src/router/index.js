@@ -55,7 +55,8 @@ const routes = [
         component: () => import('@/components/personal/Zan.vue'),
       },
     ]
-  }, {
+  }, 
+  {
     path: '/detail',
     name: 'datail',
     component: () => import('@/views/News-detail.vue')
@@ -117,7 +118,16 @@ const routes = [
     name: 'Regin',
     component: () => import('@/views/houtai/Reg.vue')
   },
-
+  {
+    path: '/pagelogin',
+    name: 'Login',
+    component: () => import('@/views/Login.vue')
+  },
+  {
+    path: '/pageregistor',
+    name: 'Registor',
+    component: () => import('@/views/Registor.vue')
+  }
 ]
 
 const router = new VueRouter({
