@@ -65,6 +65,12 @@
 <script>
 import Nav from './Nav'
 export default {
+    created() {  //初始化
+        let searchRecord =  localStorage.searchRecordList
+        if(searchRecord){
+            this.searchRecord = JSON.parse(searchRecord)
+        }
+    },
     components:{
         Nav
     },
@@ -80,18 +86,7 @@ export default {
                 leftSpan:'新华社',
                 rightSpan:'2020-12-3'
             },
-            searchRecord : [
-                '王昭君',
-                '貂蝉',
-                '杨玉环',
-                '西施',
-                '不知火舞',
-                '钟无艳',
-                '大乔',
-                '小乔',
-                '露娜',
-                '蔡文姬'
-            ],
+            searchRecord : [],
             hot_search_word:[
                 '新常态',
                 '狗叫',
@@ -115,20 +110,36 @@ export default {
     methods:{
         remove(index){   //删除单条搜索历史
             this.searchRecord.splice(index,1)
+            this.saveSearchRecord()
         },
         clearHistory(){   //清除搜索历史
             this.searchRecord = []
+            this.saveSearchRecord()
+
         },
         haha(){   //搜索图标
-            if(this.inputValue === ''){
+        console.log(this.inputValue.length)
+            if(this.inputValue.length < 2){
                 alert('额，搜索词要在2字以上哦');
             }else{
+                if(this.searchRecord.includes(this.inputValue)){
+                    let index = this.searchRecord.indexOf(this.inputValue)
+                    this.searchRecord.splice(index,1);
+                    this.searchRecord.unshift(this.inputValue)
+                }else{
+                    this.searchRecord.unshift(this.inputValue)
+                }
                 this.showpage = false;
-                this.backpage = true
+                this.backpage = true;
+                this.saveSearchRecord()
             }
         },
+        //保存到本地存储
+        saveSearchRecord(){
+            localStorage.searchRecordList = JSON.stringify(this.searchRecord)
+        },
         toDetails(){   //输入框回车事件
-            if(this.inputValue === ''){
+            if(this.inputValue.length < 2){
                 alert('额，搜索词要在2字以上哦');
                 this.backpage = false
                 return 
@@ -145,8 +156,16 @@ export default {
         },
         replaceInput(item){  // 修改输入框中的值
             this.inputValue = item
+             if(this.searchRecord.includes(this.inputValue)){
+                    let index = this.searchRecord.indexOf(this.inputValue)
+                    this.searchRecord.splice(index,1);
+                    this.searchRecord.unshift(this.inputValue)
+                }else{
+                    this.searchRecord.unshift(this.inputValue)
+                }
             this.showpage = false
             this.backpage = true
+            this.saveSearchRecord()
         }
     }
 }
