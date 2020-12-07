@@ -67,6 +67,25 @@ const routes = [
       },
     ]
   }, 
+  //修改个人资料
+  {
+    path : "/changeps",
+    name : "ChangePs",
+    redirect:"/changeps/changedata" ,
+    component:()=>import("@/views/ChangePs.vue"),
+    children : [
+      {
+        path : "/changeps/changedata",
+        name : "ChangeData",
+        component : ()=>import("@/views/persondata/changedata.vue")
+      },
+      {
+        path : "/changeps/userdata",
+        name : "ChangeData",
+        component : ()=>import("@/views/persondata/userdata.vue")
+      }
+    ]
+  }, 
   {
     path: '/detail',
     name: 'datail',

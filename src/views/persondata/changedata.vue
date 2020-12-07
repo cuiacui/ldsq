@@ -120,6 +120,8 @@
                 </el-option>
             </el-select>
       </p>
+
+      <el-button type="primary" @click="save">保存</el-button>
       
   </div>
 </template>
@@ -127,8 +129,8 @@
 <script>
 export default {
     methods:{
-        a(){
-            console.log(this.radio)
+        save(){  //保存资料
+            
         }
     },
     data(){
