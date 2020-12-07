@@ -13,7 +13,7 @@
         <!-- 用户资料 -->
         <div class="personal_detail">
           <div class="personal_update">
-            <span class="el-icon-edit-outline" >&nbsp; &nbsp;&nbsp;&nbsp;修改资料</span>
+            <span class="el-icon-edit-outline" @click="gotoChangePs">&nbsp; &nbsp;&nbsp;&nbsp;修改资料</span>
           </div>
           <div class="personal_detail_content_left">
             <ul>
@@ -68,6 +68,11 @@ export default {
     }
   },
   methods:{   
+    gotoChangePs(){
+      this.$router.push({
+        path : "/changeps/changedata"
+      })
+    }
   }
 
 }

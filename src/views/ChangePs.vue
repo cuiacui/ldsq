@@ -4,9 +4,8 @@
            ＜返回我的主页
       </span>
       <div class="nav">
-          <router-link to="/changedata">修改资料</router-link>
-          <router-link to="/userdata">账户信息</router-link>
-          <router-link to="/userbind">账户绑定</router-link>
+          <router-link to="/changeps/changedata">修改资料</router-link>
+          <router-link to="/changeps/userdata">账户信息</router-link>
       </div>
 
       <div class="main">
@@ -19,7 +18,9 @@
 export default {
     methods : {
         back(){
-            window.history.back()
+            this.$router.push({
+                path : "/personal"
+            })
         }
     }
 }
